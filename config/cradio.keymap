@@ -62,24 +62,33 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <30 33>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp F  &kp P             &kp B        &kp J          &kp L      &kp U      &kp Y    &kp SEMICOLON
-&kp A  &kp R  &kp S  &kp T             &kp G        &kp M          &kp N      &kp E      &kp I    &kp O
-&kp Z  &kp X  &kp C  &kp D             &kp V        &kp K          &kp H      &kp COMMA  &kp DOT  &kp NON_US_BACKSLASH
-                     &lt 2 LEFT_SHIFT  &kp SPACE    &kp BACKSPACE  &lt 1 TAB
+&kp Q  &kp W  &kp F  &kp P      &kp B             &kp J      &kp L          &kp U      &kp Y    &kp SEMICOLON
+&kp A  &kp R  &kp S  &kp T      &kp G             &kp M      &kp N          &kp E      &kp I    &kp O
+&kp Z  &kp X  &kp C  &kp D      &kp V             &kp K      &kp H          &kp COMMA  &kp DOT  &kp NON_US_BACKSLASH
+                     &kp SPACE  &kp LEFT_SHIFT    &lt 1 TAB  &kp BACKSPACE
             >;
         };
 
         right_layer {
             bindings = <
-&kp N1   &kp N2    &kp N3     &kp N4   &kp N5     &kp N6    &kp N7     &kp N8     &kp N9     &kp N0
-&kp DEL  &kp CAPS  &kp PSCRN  &kp INS  &trans     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans
-&trans   &trans    &trans     &trans   &trans     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &bootloader
-                              &trans   &kp ESC    &trans    &trans
+&kp N1  &kp N2  &kp N3  &kp N4   &kp N5     &kp N6   &kp N7    &kp N8    &kp N9     &kp N0
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5     &kp F6   &trans    &kp UP    &trans     &trans
+&kp F7  &kp F8  &kp F9  &kp F10  &kp F11    &kp F12  &kp LEFT  &kp DOWN  &kp RIGHT  &bootloader
+                        &trans   &tog 0     &tog 2   &trans
             >;
         };
 
@@ -88,22 +97,22 @@
 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT          &kp CARET  &kp AMPS   &kp ASTRK  &kp GRAVE  &kp TILDE
 &kp DQT   &kp LBKT  &kp LBRC  &kp LPAR  &default_report    &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON  &kp SEMI
 &kp SQT   &kp RBKT  &kp RBRC  &kp RPAR  &bootloader        &kp BSLH   &kp UNDER  &kp PLUS   &kp PIPE   &kp QMARK
-                              &trans    &trans             &tog 4     &trans
+                              &trans    &tog 1             &tog 3     &tog 4
             >;
         };
 
         tri_layer {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG   &tog 0  &kp C_MUTE    &kp C_PREV
-&kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp C_BRI_UP   &trans  &kp C_VOL_UP  &kp C_PP
-&kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &kp C_BRI_DEC  &trans  &kp C_VOL_DN  &kp C_NEXT
-                          &trans   &trans          &trans        &trans
+&trans  &trans  &trans  &trans  &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG   &trans  &kp C_MUTE    &kp C_PREV
+&trans  &trans  &trans  &trans  &bt BT_SEL 1    &bt BT_SEL 3  &kp C_BRI_UP   &trans  &kp C_VOL_UP  &kp C_PP
+&trans  &trans  &trans  &trans  &bt BT_CLR      &bt BT_SEL 4  &kp C_BRI_DEC  &trans  &kp C_VOL_DN  &kp C_NEXT
+                        &tog 0  &tog 0          &tog 0        &tog 0
             >;
         };
 
         mouse {
             bindings = <
-&tog 4  &mkp MB4  &mkp MCLK  &mkp MB5   &trans        &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &tog 4
+&tog 0  &mkp MB4  &mkp MCLK  &mkp MB5   &trans        &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &tog 0
 &trans  &trans    &trans     &trans     &trans        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
 &trans  &trans    &trans     &trans     &trans        &trans          &mkp MB4        &mkp MCLK     &mkp MB5         &trans
                              &kp SPACE  &kp LSHIFT    &mkp LCLK       &mkp RCLK

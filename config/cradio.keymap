@@ -76,10 +76,10 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp F  &kp P      &kp B             &kp J      &kp L          &kp U      &kp Y    &kp SEMICOLON
-&kp A  &kp R  &kp S  &kp T      &kp G             &kp M      &kp N          &kp E      &kp I    &kp O
-&kp Z  &kp X  &kp C  &kp D      &kp V             &kp K      &kp H          &kp COMMA  &kp DOT  &kp NON_US_BACKSLASH
-                     &kp SPACE  &kp LEFT_SHIFT    &lt 1 TAB  &kp BACKSPACE
+&kp Q  &kp W  &kp F  &kp P      &kp B          &kp J      &kp L          &kp U      &kp Y    &kp SEMICOLON
+&kp A  &kp R  &kp S  &kp T      &kp G          &kp M      &kp N          &kp E      &kp I    &kp O
+&kp Z  &kp X  &kp C  &kp D      &kp V          &kp K      &kp H          &kp COMMA  &kp DOT  &kp NON_US_BACKSLASH
+                     &kp SPACE  &lt 1 LSHFT    &lt 2 TAB  &kp BACKSPACE
             >;
         };
 
@@ -94,10 +94,10 @@
 
         left_layer {
             bindings = <
-&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT          &kp CARET  &kp AMPS   &kp ASTRK  &kp GRAVE  &kp TILDE
-&kp DQT   &kp LBKT  &kp LBRC  &kp LPAR  &default_report    &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON  &kp SEMI
-&kp SQT   &kp RBKT  &kp RBRC  &kp RPAR  &bootloader        &kp BSLH   &kp UNDER  &kp PLUS   &kp PIPE   &kp QMARK
-                              &trans    &tog 1             &tog 3     &tog 4
+&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp GRAVE  &kp TILDE
+&kp DQT   &kp LBRC  &kp RBRC  &kp LPAR  &kp RPAR     &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON  &kp SEMI
+&kp SQT   &kp SQT   &kp DQT   &kp LBKT  &kp RBKT     &kp BSLH   &kp UNDER  &kp PLUS   &kp PIPE   &kp QMARK
+                              &trans    &tog 1       &tog 3     &tog 4
             >;
         };
 
